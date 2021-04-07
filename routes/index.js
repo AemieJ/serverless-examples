@@ -1,7 +1,9 @@
 const lists = require("./list");
-const students = require("./student");
+const register = require("./register");
+const login = require("./login");
 
 module.exports = {
     lists,
-    students
+    register,
+    login
 };

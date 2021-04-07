@@ -4,10 +4,11 @@ const api = new APIBuilder();
 const Router = require('claudiaexpress').Router;
 const router = Router(api);
 
-const { lists, students } = require("./routes/index");
+const { lists, register, login } = require("./routes/index");
 
 router.use("/list", lists);
-router.use("/student", students);
+router.use("/user", register);
+router.use("/user", login);
 
 module.exports = router.bootstrap();
 

@@ -1,5 +1,5 @@
-const Student = require("./student.model");
+const User = require("./user.model");
 
 module.exports = {
-    Student
+    User
 };
