@@ -1,0 +1,24 @@
+{
+  "name": "list-add-atlas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AemieJ",
+  "license": "MIT",
+  "scripts": {
+    "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
+    "start": "claudia create --profile claudia --api-module index --region ap-south-1",
+    "update": "claudia update --profile claudia",
+    "delete": "claudia destroy --profile claudia"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "aws-serverless-express": "^3.4.0",
+    "bcrypt": "^5.0.1",
+    "claudia-api-builder": "^4.1.2",
+    "claudiaexpress": "^0.3.4",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "list-add-atlas-executor",
+    "name": "list-add-atlas",
+    "region": "ap-south-1"
+  },
+  "api": {
+    "id": "xzd1sqxlyg",
+    "module": "index"
+  }
+}
