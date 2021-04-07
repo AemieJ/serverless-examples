@@ -1,5 +1,5 @@
 {
-  "name": "list-add-atlas",
+  "name": "jwt-mongo-auth",
   "version": "1.0.0",
   "main": "index.js",
   "author": "AemieJ",
