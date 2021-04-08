@@ -1,0 +1,16 @@
+{
+  "name": "backup-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
+    "start": "claudia create --profile claudia --name backup --handler lambda.handler --policies policy --region ap-south-1",
+    "update": "claudia update --profile claudia",
+    "delete": "claudia destroy --profile claudia"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.882.0",
+    "claudia-api-builder": "^4.1.2"
+  }
+}
