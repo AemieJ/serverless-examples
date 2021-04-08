@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "backup-executor",
+    "name": "backup",
+    "region": "ap-south-1"
+  }
+}

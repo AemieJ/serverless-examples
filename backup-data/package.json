@@ -6,6 +6,7 @@
   "scripts": {
     "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
     "start": "claudia create --profile claudia --name backup --handler lambda.handler --policies policy --region ap-south-1",
+    "create-api": "claudia create --profile claudia --name backup --api-module index --policies policy --region ap-south-1",
     "update": "claudia update --profile claudia",
     "delete": "claudia destroy --profile claudia"
   },
