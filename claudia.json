@@ -1,11 +1,11 @@
 {
   "lambda": {
-    "role": "jwt-mongo-auth-executor",
-    "name": "jwt-mongo-auth",
+    "role": "libhub-executor",
+    "name": "libhub",
     "region": "ap-south-1"
   },
   "api": {
-    "id": "j64lj7cnx3",
+    "id": "jct8qf7ugl",
     "module": "index"
   }
 }

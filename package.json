@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
-    "start": "claudia create --profile claudia --api-module index --region ap-south-1",
+    "start": "claudia create --profile claudia --name libhub --api-module index --region ap-south-1",
     "update": "claudia update --profile claudia",
     "delete": "claudia destroy --profile claudia"
   },
