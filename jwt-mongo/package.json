@@ -8,7 +8,9 @@
     "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
     "start": "claudia create --profile claudia --name libhub --api-module index --region ap-south-1",
     "update": "claudia update --profile claudia",
-    "delete": "claudia destroy --profile claudia"
+    "delete": "claudia destroy --profile claudia",
+    "serverless-auth": "serverless create --template aws-nodejs --path auth",
+    "serverless-view": "serverless create --template aws-nodejs --path view"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
@@ -19,9 +21,11 @@
     "claudiaexpress": "^0.3.4",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.3",
-    "serverless": "^2.34.0"
+    "serverless": "^2.34.0",
+    "serverless-http": "^2.7.0"
   }
 }
