@@ -1,0 +1,17 @@
+{
+  "name": "greet-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "init-claudia": "claudia generate-serverless-express-proxy --express-module index",
+    "deploy": "sudo serverless deploy -v",
+    "remove-claudia": "rm -rf lambda.js",
+    "remove": "sudo serverless remove"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.883.0",
+    "aws-serverless-express": "^3.4.0",
+    "express": "^4.17.1"
+  }
+}

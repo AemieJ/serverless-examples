@@ -1,0 +1,13 @@
+{
+  "name": "microservice-architecture-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AemieJ",
+  "license": "MIT",
+  "scripts": {
+    "serverless": "serverless create --template aws-nodejs --path service"
+  },
+  "dependencies": {
+    "serverless": "^2.34.0"
+  }
+}
