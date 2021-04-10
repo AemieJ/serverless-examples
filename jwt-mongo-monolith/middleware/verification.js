@@ -34,9 +34,16 @@ const verification = async (req) => {
             statusCode: 403,
             body: "Refresh token is expired. User must re-login"
         };
+    
+    if (!user.isLogged) {
+        return {
+            statusCode: 403,
+            body: "User not logged in. Log in to access the page"
+        };
+    }
 
     // refreshing the access token with the help of refresh token
-    if (currentTimeSinceEpoch > accessTokenExpires) {
+    if (currentTimeSinceEpoch > accessTokenExpires && user.isLogged) {
         if (currentTimeSinceEpoch <= refreshPayload.exp) {
             const accessToken = jwt.sign({_id: check._id, email: check.email }, process.env.TOKEN_SECRET, {expiresIn: "5m"});
             const token = {
@@ -55,7 +62,7 @@ const verification = async (req) => {
                 body: "Refresh token is expired. User must re-login"
             };
         }
-    } else {
+    } else if (currentTimeSinceEpoch <= accessTokenExpires && user.isLogged) {
         const payload = jwt.verify(token, process.env.TOKEN_SECRET);
         if (!payload) return {
             statusCode: 403, 

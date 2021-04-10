@@ -51,8 +51,9 @@ api.post("/login", async(req, res, next) => {
             let token = createToken(user);
     
             const refreshToken = token.refreshToken.token;
+            const isLogged = true;
             try {
-                await User.findOneAndUpdate({ email: user.email }, { refreshToken }, { 
+                await User.findOneAndUpdate({ email: user.email }, { refreshToken, isLogged }, { 
                     new: true,
                     useFindAndModify: false });
                 response = {

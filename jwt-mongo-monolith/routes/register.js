@@ -25,7 +25,7 @@ api.post("/register", async (req, res, next) => {
     
     if (insertInDB) {
         password = crypto.createHash('sha256').update(password).digest('base64');
-        const user = new User({ name, email, password });
+        const user = new User({ name, email, password, isLogged: false });
 
         await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
         const checkUserExists = await User.findOne({ email });

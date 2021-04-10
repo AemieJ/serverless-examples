@@ -19,6 +19,11 @@ const userSchema = new mongoose.Schema({
         min: 6, 
         max: 256
     },
+    isLogged: {
+        type: Boolean,
+        required: false,
+        default: false
+    },
     refreshToken: {
         type: String,
         required: false,
