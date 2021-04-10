@@ -13,8 +13,6 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "aws-serverless-express": "^3.4.0",
-    "bcrypt": "^5.0.1",
-    "bcryptjs": "^2.4.3",
     "claudia-api-builder": "^4.1.2",
     "claudiaexpress": "^0.3.4",
     "crypto": "^1.0.1",
@@ -22,8 +20,6 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
-    "mongoose": "^5.12.3",
-    "serverless": "^2.34.0",
-    "serverless-http": "^2.7.0"
+    "mongoose": "^5.12.3"
   }
 }
